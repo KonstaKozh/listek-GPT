@@ -69,13 +69,16 @@ img{ max-width: 100%; display: block; }
 
 .brand__text small{
     display: block;
-    color: var(--muted);
-    font-size: 11px;
+    color: rgba(255,255,255,.85);
+    font-size: 12px;
     margin-top: 2px;
-    line-height: 1.2;
+    line-height: 1.35;
 }
 .site-header .brand__text small{
     margin-top: 0;
+}
+.brand__address small{
+    font-size: 13px;
 }
 .brand__phones{
     width: fit-content;
@@ -86,6 +89,8 @@ img{ max-width: 100%; display: block; }
     list-style: none;
     display: grid;
     gap: 2px;
+    font-size: 11px;
+    line-height: 1.2;
 }
 .brand__phones-list li{
     margin: 0;
@@ -100,8 +105,8 @@ img{ max-width: 100%; display: block; }
     background: rgba(255,255,255,.04);
 }
 .nav a{
-    font-size: 13px;
-    color: var(--muted);
+    font-size: 14px;
+    color: rgba(255,255,255,.88);
     padding: 6px 8px;
     border-radius: 999px;
 }
