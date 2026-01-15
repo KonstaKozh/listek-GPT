@@ -1,4 +1,4 @@
-﻿/* ====== Base ====== */
+/* ====== Base ====== */
 :root{
     --bg: #0b1020;
     --surface: rgba(255,255,255,.06);
@@ -46,6 +46,7 @@ img{ max-width: 100%; display: block; }
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 16px;
     padding: 0;
 }
@@ -455,27 +456,47 @@ input:focus, select:focus, textarea:focus{
 }
 
 /* ====== Responsive ====== */
-@media (max-width: 980px){
-    .nav{ display: none; }
-    .hero-grid{ grid-template-columns: 1fr; }
+@media (max-width: 1200px){
+    :root{ --container: 1040px; }
+    .header-row{ padding: 8px 0; row-gap: 10px; }
+    .brand a{ width: 180px; }
+    .nav{ flex-wrap: wrap; justify-content: center; }
+}
+
+@media (max-width: 1024px){
+    .header-row{ justify-content: center; }
+    .brand__address, .brand__phones{ text-align: center; }
+    .brand__phones-list{ justify-items: center; }
+    .header-cta{ margin-left: 0; }
     .cards{ grid-template-columns: repeat(2, 1fr); }
     .price-grid{ grid-template-columns: repeat(2, 1fr); }
     .steps{ grid-template-columns: repeat(2, 1fr); }
     .docs-grid{ grid-template-columns: repeat(2, 1fr); }
+    .contact-cards{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 980px){
+    .nav{ display: none; }
+    .hero{ padding-top: 28px; }
+    .hero-grid{ grid-template-columns: 1fr; }
+    .hero-content, .hero-slider{ padding: 18px; }
     .contact-grid{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px){
+    .header-row{ gap: 8px; }
+    .brand a{ width: 160px; }
+    .badges{ gap: 8px; }
+    .badges li{ font-size: 12px; padding: 8px 10px; }
     .contact-cards{ grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px){
-    .header-row{ gap: 10px; }
+    .container{ width: min(var(--container), calc(100% - 20px)); }
     .brand__text small{ display: none; }
-    .brand__logo{
-        object-fit: contain;
-        display: block;
-    }
-    .brand a{
-        width: 260px;
-    }
+    .brand a{ width: 200px; }
+    .header-cta{ width: 100%; }
+    .hero h1{ font-size: clamp(24px, 7vw, 32px); }
     .cards{ grid-template-columns: 1fr; }
     .price-grid{ grid-template-columns: 1fr; }
     .steps{ grid-template-columns: 1fr; }
