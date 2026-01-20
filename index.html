@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8" />
@@ -20,12 +20,18 @@
 
         <div class="brand__text brand__address">
             <small>г.Самара, ул.Победы, 141</small>
+            <div class="brand__links" aria-label="Почта и мессенджеры">
+                <a class="email-link" href="mailto:listek-ltd@yandex.ru">listek-ltd@yandex.ru</a>
+                <a class="icon-link" href="tg://resolve?domain=listek_63" aria-label="Telegram"><span class="icon icon--tg" aria-hidden="true"></span></a>
+                <a class="icon-link" href="https://wa.me/7923743082" aria-label="WhatsApp"><img class="icon-img" src="img/Whatsapp%20Whats%20App%20SVG%20Icon.svg" alt="" aria-hidden="true"></a>
+                <a class="icon-link" href="https://max.ru/u/f9LHodD0cOJpi0qRV3DcBDvsZw5FiWZTZgHaVzPJs5uOEKYZ432UsiKM1uc" aria-label="MAX"><img class="icon-img" src="img/max-messenger-sign-logo.svg" alt="" aria-hidden="true"></a>
+            </div>
         </div>
         <div class="brand__text brand__phones">
             <ul class="brand__phones-list" aria-label="Телефоны">
-                    <li><a href="tel:+78469969019">+7-846-996-90-19</a></li>
-                    <li><a href="tel:+78469969734">+7-846-996-97-34</a></li>
-                    <li><a href="tel:+78469968376">+7-846-996-83-76</a></li>
+                    <li><a class="icon-link" href="tel:+78469969019"><span class="icon icon--phone" aria-hidden="true"></span>+7-846-996-90-19</a></li>
+                    <li><a class="icon-link" href="tel:+78469969734"><span class="icon icon--phone" aria-hidden="true"></span>+7-846-996-97-34</a></li>
+                    <li><a class="icon-link" href="tel:+78469968376"><span class="icon icon--phone" aria-hidden="true"></span>+7-846-996-83-76</a></li>
                 </ul>
         </div>
         <div class="mobile-address" aria-label="Адрес">г. Самара, ул. Победы, 141</div>
@@ -38,7 +44,6 @@
             <a href="#contacts">Контакты</a>
         </nav>
 
-        <a class="btn btn--primary header-cta" href="#contacts">Оставить заявку</a>
     </div>
 </header>
 
@@ -57,7 +62,7 @@
                 </p>
 
                 <div class="hero-actions">
-                    <a class="btn btn--primary" href="#contacts">Вызвать мастера</a>
+                    <a class="btn btn--primary" href="#request">Вызвать мастера</a>
                     <a class="btn btn--ghost" href="#services">Посмотреть услуги</a>
                 </div>
 
@@ -267,33 +272,50 @@
 
     <!-- CONTACTS -->
     <section id="contacts" class="section section--alt">
-        <div class="container contact-grid">
+        <div class="container">
             <div>
-                <h2>Контакты</h2>
-                <p class="lead">Оставь заявку — ответим и подскажем, что можно сделать уже сейчас.</p>
+                <div class="section-head">
+                    <h2>Контакты</h2>
+                    <p>Оставь заявку - ответим и подскажем, что можно сделать уже сейчас.</p>
+                </div>
 
                 <div class="contact-cards">
                     <div class="contact-card">
                         <h3>Телефон</h3>
-                        <p><a href="tel:+78469969019">+7-846-996-90-19</a></p>
-                        <p class="muted">Городской номер</p>
-                    </div>
-                    <div class="contact-card">
-                        <h3>Почта</h3>
-                        <p><a href="mailto:service@example.com">service@example.com</a></p>
-                        <p class="muted">Замени на свою почту</p>
+                        <p><a class="icon-link" href="tel:+78469969019"><span class="icon icon--phone" aria-hidden="true"></span>+7-846-996-90-19</a></p>
+                        <p><a class="icon-link" href="tel:+78469969734"><span class="icon icon--phone" aria-hidden="true"></span>+7-846-996-97-34</a></p>
+                        <p><a class="icon-link" href="tel:+78469968376"><span class="icon icon--phone" aria-hidden="true"></span>+7-846-996-83-76</a></p>
                     </div>
                     <div class="contact-card">
                         <h3>Адрес</h3>
                         <p>г. Самара, ул. Победы, 141</p>
-                        <p class="muted">Уточните маршрут при записи</p>
+                        <p><a class="icon-link email-link" href="mailto:listek-ltd@yandex.ru"><span class="icon icon--mail" aria-hidden="true"></span>listek-ltd@yandex.ru</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Мессенджеры</h3>
+                        <p><a class="icon-link" href="tg://resolve?domain=listek_63"><span class="icon icon--tg" aria-hidden="true"></span>Telegram</a></p>
+                        <p><a class="icon-link" href="https://wa.me/7923743082"><img class="icon-img" src="img/Whatsapp%20Whats%20App%20SVG%20Icon.svg" alt="" aria-hidden="true">WhatsApp</a></p>
+                        <p><a class="icon-link" href="https://max.ru/u/f9LHodD0cOJpi0qRV3DcBDvsZw5FiWZTZgHaVzPJs5uOEKYZ432UsiKM1uc"><img class="icon-img" src="img/max-messenger-sign-logo.svg" alt="" aria-hidden="true">MAX</a></p>
                     </div>
                 </div>
+
+                <div class="contact-map" aria-label="Карта расположения">
+                    <script type="text/javascript" charset="utf-8" async
+                            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6736674fa9349e70405c2d392b7ce9546575f6d2c5b9e830390dd1bb0a8dc787&width=100%25&height=100%25&lang=ru_RU&scroll=true"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REQUEST -->
+    <section id="request" class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2>Заявка на ремонт</h2>
+                <p>Заполни форму, и мы свяжемся с тобой для уточнения деталей.</p>
             </div>
 
             <form class="form" action="#" method="post" aria-label="Форма заявки">
-                <h3>Заявка на ремонт</h3>
-
                 <label>
                     <span>Имя</span>
                     <input type="text" name="name" placeholder="Как к вам обращаться" required>
@@ -324,7 +346,7 @@
                 </label>
 
                 <button class="btn btn--primary btn--full" type="submit">Отправить</button>
-                <p class="muted tiny">Нажимая “Отправить”, вы соглашаетесь на обработку данных для связи.</p>
+                <p class="muted tiny">Нажимая "Отправить", вы соглашаетесь на обработку данных для связи.</p>
             </form>
         </div>
     </section>
@@ -332,8 +354,12 @@
 
 <footer class="site-footer">
     <div class="container footer-row">
-        <p>© <span id="year">2026</span> Листэк. Ремонт оргтехники и заправка картриджей.</p>
-        <p class="muted">Сайт на HTML + CSS. Можно расширить под многостраничник.</p>
+        <p>c <span id="year">2026</span> Листэк. Ремонт оргтехники и заправка картриджей.</p>
+        <div class="footer-phones" aria-label="Телефоны">
+            <a class="icon-link" href="tel:+78469969019"><span class="icon icon--phone" aria-hidden="true"></span>+7-846-996-90-19</a>
+            <a class="icon-link" href="tel:+78469969734"><span class="icon icon--phone" aria-hidden="true"></span>+7-846-996-97-34</a>
+            <a class="icon-link" href="tel:+78469968376"><span class="icon icon--phone" aria-hidden="true"></span>+7-846-996-83-76</a>
+        </div>
     </div>
 </footer>
 
@@ -343,6 +369,7 @@
 </script>
 </body>
 </html>
+
 
 
 
