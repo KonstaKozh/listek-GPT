@@ -170,7 +170,7 @@ img{ max-width: 100%; display: block; }
 .brand a{
     display: block;
     padding: 6px 0 2px;
-    width: 170px;
+    width: 150px;
 }
 .brand__logo{
     width: 100%;
@@ -307,13 +307,17 @@ img{ max-width: 100%; display: block; }
     border: 1px solid var(--stroke);
     font-weight: 650;
     letter-spacing: .2px;
-    transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    transition: transform .15s ease, background .15s ease, border-color .15s ease, box-shadow .15s ease;
     cursor: pointer;
     user-select: none;
 }
 .btn:hover{ transform: translateY(-1px); }
 .btn:active{ transform: translateY(0); }
-
+.btn:focus-visible{
+    outline: none;
+    border-color: var(--accent-focus);
+    box-shadow: 0 0 0 4px var(--accent-glow);
+}
 .btn--primary{
     background: linear-gradient(135deg, var(--accent-soft), var(--accent-2-soft));
     border-color: var(--accent-soft);
