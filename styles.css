@@ -21,6 +21,8 @@
     --contact-btn-border: rgba(15,23,42,.35);
     --contact-btn-hover: #0b1220;
     --contact-icon: #0ea5e9;
+    --modal-backdrop: rgba(15,23,42,.45);
+    --modal-panel-bg: #ffffff;
     --shadow: 0 20px 50px rgba(15,23,42,.14);
     --panel-bg: rgba(255,255,255,.9);
     --panel-bg-2: rgba(255,255,255,.7);
@@ -68,6 +70,8 @@
         --contact-btn-border: rgba(110,231,255,.45);
         --contact-btn-hover: rgba(110,231,255,.28);
         --contact-icon: #6ee7ff;
+        --modal-backdrop: rgba(2,6,23,.5);
+        --modal-panel-bg: rgba(11,16,32,.96);
         --shadow: 0 20px 60px rgba(0,0,0,.45);
         --panel-bg: rgba(255,255,255,.04);
         --panel-bg-2: rgba(255,255,255,.03);
@@ -772,7 +776,7 @@ img{ max-width: 100%; display: block; }
 .contact-modal__backdrop{
     position: absolute;
     inset: 0;
-    background: rgba(15,23,42,.45);
+    background: var(--modal-backdrop);
 }
 .contact-modal__panel{
     position: relative;
@@ -780,7 +784,7 @@ img{ max-width: 100%; display: block; }
     padding: 18px;
     border-radius: 18px;
     border: 1px solid var(--stroke);
-    background: var(--panel-bg);
+    background: var(--modal-panel-bg);
     box-shadow: var(--shadow);
     z-index: 1;
 }
