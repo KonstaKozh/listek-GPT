@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+  <defs>
+    <style>
+      :root { --bg: #0ea5e9; --fg: #ffffff; }
+      @media (prefers-color-scheme: dark) {
+        :root { --bg: #6ee7ff; --fg: #0b1020; }
+      }
+    </style>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="var(--bg)"/>
+  <path d="M22 18h8v24h16v6H22z" fill="var(--fg)"/>
+</svg>
