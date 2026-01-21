@@ -36,7 +36,11 @@
         </div>
         <div class="mobile-address" aria-label="Адрес">г. Самара, ул. Победы, 141</div>
 
-        <nav class="nav">
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню">
+            <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <nav id="site-nav" class="nav">
             <a href="#services">Услуги</a>
             <a href="#prices">Цены</a>
             <a href="#steps">Как работаем</a>
@@ -95,7 +99,6 @@
                         </figure>
                     </div>
                 </div>
-                <p class="slider-hint">Совет: добавь свои реальные фото — будет больше доверия.</p>
             </div>
         </div>
     </section>
@@ -242,6 +245,7 @@
                     </div>
                 </li>
             </ol>
+            <p class="steps-note">Для организаций возможна доставка техники в мастерскую и обратно.</p>
         </div>
     </section>
 
@@ -257,14 +261,24 @@
                 <article class="doc-card">
                     <h3>Договор на ремонт</h3>
                     <p class="muted">Фиксируем работы, сроки и ответственность.</p>
+                    <div class="doc-actions">
+                        <a class="btn btn--ghost btn--small" href="doc/Договор.doc" download>Договор типовой</a>
+                        <a class="btn btn--ghost btn--small" href="doc/Договор_Бюджет.docx" download>Договор-бюджет</a>
+                    </div>
                 </article>
                 <article class="doc-card">
-                    <h3>Акт выполненных работ</h3>
-                    <p class="muted">Подтверждение выполненных услуг и стоимости.</p>
+                    <h3>Карточка предприятия</h3>
+                    <p class="muted">Реквизиты и данные компании для партнеров.</p>
+                    <div class="doc-actions">
+                        <a class="btn btn--ghost btn--small" href="doc/Карточка предприятия.pdf" target="_blank" rel="noopener">Открыть PDF</a>
+                    </div>
                 </article>
                 <article class="doc-card">
-                    <h3>Гарантийный талон</h3>
-                    <p class="muted">Гарантия на ремонт и комплектующие.</p>
+                    <h3>Документы организации</h3>
+                    <p class="muted">Пакет документов по запросу.</p>
+                    <div class="doc-actions">
+                        <a class="btn btn--ghost btn--small" href="doc/listek.zip" download>Скачать документы</a>
+                    </div>
                 </article>
             </div>
         </div>
@@ -355,7 +369,7 @@
 
 <footer class="site-footer">
     <div class="container footer-row">
-        <p>c <span id="year">2026</span> Листэк. Ремонт оргтехники и заправка картриджей.</p>
+        <p> <span id="year">2026</span> Листэк. Ремонт оргтехники и заправка картриджей.</p>
         <div class="footer-phones" aria-label="Телефоны">
             <a class="icon-link" href="tel:+78469969019"><span class="icon icon--phone" aria-hidden="true"></span>+7-846-996-90-19</a>
             <a class="icon-link" href="tel:+78469969734"><span class="icon icon--phone" aria-hidden="true"></span>+7-846-996-97-34</a>
@@ -367,6 +381,23 @@
 <script>
     // маленький удобный штрих — актуальный год (не влияет на требование "HTML+CSS")
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('site-nav');
+
+    if (navToggle && nav) {
+        navToggle.addEventListener('click', () => {
+            const isOpen = document.body.classList.toggle('nav-open');
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        nav.addEventListener('click', (event) => {
+            if (event.target instanceof HTMLAnchorElement) {
+                document.body.classList.remove('nav-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
 </script>
 </body>
 </html>
