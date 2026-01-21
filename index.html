@@ -67,8 +67,8 @@
                 </p>
 
                 <div class="hero-actions">
-                    <a class="btn btn--primary" href="#request">Вызвать мастера</a>
-                    <a class="btn btn--ghost" href="#services">Посмотреть услуги</a>
+                    <button class="btn btn--primary btn--doc" type="button" data-open-contact data-modal-title="Вызвать мастера">Вызвать мастера</button>
+                    <a class="btn btn--ghost btn--doc" href="#services">Посмотреть услуги</a>
                 </div>
 
                 <ul class="badges" aria-label="Преимущества">
@@ -124,7 +124,7 @@
                         <li>Чистка трактов, устранение замятий</li>
                         <li>Настройка печати и сети</li>
                     </ul>
-                    <a class="card-link" href="#contacts">Запросить ремонт</a>
+                    <button class="btn btn--doc btn--service card-link" type="button" data-open-contact data-modal-title="Запросить ремонт">Запросить ремонт</button>
                 </article>
 
                 <article class="card">
@@ -138,7 +138,7 @@
                         <li>Восстановление: замена чипов, барабанов</li>
                         <li>Тестовая печать, контроль качества</li>
                     </ul>
-                    <a class="card-link" href="#contacts">Узнать стоимость</a>
+                    <button class="btn btn--doc btn--service card-link" type="button" data-open-contact data-modal-title="Узнать стоимость">Узнать стоимость</button>
                 </article>
 
                 <article class="card">
@@ -152,7 +152,7 @@
                         <li>Апгрейд SSD / RAM, установка ОС</li>
                         <li>Удаление вирусов, настройка</li>
                     </ul>
-                    <a class="card-link" href="#contacts">Оставить заявку</a>
+                    <button class="btn btn--doc btn--service card-link" type="button" data-open-contact data-modal-title="Оставить заявку">Оставить заявку</button>
                 </article>
 
                 <article class="card">
@@ -166,7 +166,7 @@
                         <li>Проблемы изображения и мерцание</li>
                         <li>Диагностика матрицы</li>
                     </ul>
-                    <a class="card-link" href="#contacts">Проконсультироваться</a>
+                    <button class="btn btn--doc btn--service card-link" type="button" data-open-contact data-modal-title="Проконсультироваться">Проконсультироваться</button>
                 </article>
             </div>
         </div>
@@ -323,54 +323,6 @@
         </div>
     </section>
 
-    <!-- REQUEST -->
-    <section id="request" class="section">
-        <div class="container">
-            <div class="section-head">
-                <h2>Заявка на ремонт</h2>
-                <p>Заполни форму, и мы свяжемся с тобой для уточнения деталей.</p>
-            </div>
-
-            <form class="form" action="#" method="post" aria-label="Форма заявки">
-                <label>
-                    <span>Имя</span>
-                    <input type="text" name="name" placeholder="Как к вам обращаться" required>
-                </label>
-
-                <label>
-                    <span>Телефон</span>
-                    <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
-                </label>
-
-                <label>
-                    <span>Email</span>
-                    <input type="email" name="email" placeholder="name@example.com" required>
-                </label>
-
-                <label>
-                    <span>Устройство</span>
-                    <select name="device" required>
-                        <option value="" disabled selected>Выберите тип</option>
-                        <option>Принтер</option>
-                        <option>МФУ</option>
-                        <option>Картридж</option>
-                        <option>Монитор</option>
-                        <option>ПК</option>
-                        <option>Ноутбук</option>
-                        <option>Другое</option>
-                    </select>
-                </label>
-
-                <label>
-                    <span>Описание проблемы</span>
-                    <textarea name="message" rows="5" placeholder="Например: не печатает, полосы, замятие, не включается..." required></textarea>
-                </label>
-
-                <button class="btn btn--primary btn--full" type="submit">Отправить</button>
-                <p class="muted tiny">Нажимая "Отправить", вы соглашаетесь на обработку данных для связи.</p>
-            </form>
-        </div>
-    </section>
 </main>
 
 <footer class="site-footer">
@@ -383,6 +335,23 @@
         </div>
     </div>
 </footer>
+
+<div class="contact-modal" aria-hidden="true" role="dialog" aria-labelledby="contact-modal-title" aria-modal="true">
+    <div class="contact-modal__backdrop" data-close-contact></div>
+    <div class="contact-modal__panel" tabindex="-1">
+        <div class="contact-modal__head">
+            <h3 id="contact-modal-title">Связаться с мастером</h3>
+            <button class="contact-modal__close" type="button" aria-label="Закрыть" data-close-contact>×</button>
+        </div>
+        <p class="contact-modal__text">Выберите удобный способ связи:</p>
+        <div class="contact-modal__actions">
+            <a class="btn btn--ghost btn--icon" href="mailto:listek-ltd@yandex.ru" aria-label="Email" title="Email"><span class="icon icon--mail" aria-hidden="true"></span></a>
+            <a class="btn btn--ghost btn--icon" href="https://t.me/listek_63" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram"><span class="icon icon--tg" aria-hidden="true"></span></a>
+            <a class="btn btn--ghost btn--icon" href="https://wa.me/79023743082" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><img class="icon-img" src="img/Whatsapp%20Whats%20App%20SVG%20Icon.svg" alt="" aria-hidden="true"></a>
+            <a class="btn btn--ghost btn--icon" href="https://max.ru/u/f9LHodD0cOJpi0qRV3DcBDvsZw5FiWZTZgHaVzPJs5uOEKYZ432UsiKM1uc" target="_blank" rel="noopener" aria-label="MAX" title="MAX"><img class="icon-img" src="img/max-messenger-sign-logo.svg" alt="" aria-hidden="true"></a>
+        </div>
+    </div>
+</div>
 
 <script>
     // маленький удобный штрих — актуальный год (не влияет на требование "HTML+CSS")
@@ -401,6 +370,69 @@
             if (event.target instanceof HTMLAnchorElement) {
                 document.body.classList.remove('nav-open');
                 navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    const contactModal = document.querySelector('.contact-modal');
+    const contactPanel = contactModal ? contactModal.querySelector('.contact-modal__panel') : null;
+    const contactTitle = contactModal ? contactModal.querySelector('#contact-modal-title') : null;
+    const contactOpens = document.querySelectorAll('[data-open-contact]');
+    const contactClose = document.querySelectorAll('[data-close-contact]');
+
+    if (contactModal && contactOpens.length && contactPanel && contactTitle) {
+        let lastFocused = null;
+        const getFocusable = () =>
+            Array.from(contactModal.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])'))
+                .filter((el) => !el.hasAttribute('disabled'));
+        const openModal = (event) => {
+            const trigger = event?.currentTarget;
+            const title = trigger?.getAttribute('data-modal-title');
+            if (title) {
+                contactTitle.textContent = title;
+            }
+            lastFocused = document.activeElement;
+            contactModal.classList.add('is-open');
+            contactModal.setAttribute('aria-hidden', 'false');
+            const focusable = getFocusable();
+            if (focusable.length > 0) {
+                focusable[0].focus();
+            } else {
+                contactPanel.focus();
+            }
+        };
+        const closeModal = () => {
+            contactModal.classList.remove('is-open');
+            contactModal.setAttribute('aria-hidden', 'true');
+            if (lastFocused instanceof HTMLElement) {
+                lastFocused.focus();
+            }
+        };
+
+        contactOpens.forEach((button) => button.addEventListener('click', openModal));
+        contactClose.forEach((btn) => btn.addEventListener('click', closeModal));
+        document.addEventListener('keydown', (event) => {
+            if (!contactModal.classList.contains('is-open')) {
+                return;
+            }
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+            if (event.key === 'Tab') {
+                const focusable = getFocusable();
+                if (focusable.length === 0) {
+                    event.preventDefault();
+                    return;
+                }
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+                if (event.shiftKey && document.activeElement === first) {
+                    event.preventDefault();
+                    last.focus();
+                } else if (!event.shiftKey && document.activeElement === last) {
+                    event.preventDefault();
+                    first.focus();
+                }
             }
         });
     }
