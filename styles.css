@@ -93,6 +93,11 @@
         --caption-border: rgba(255,255,255,.12);
         --input-bg: rgba(0,0,0,.22);
     }
+    .site-header .email-link{
+        color: var(--accent);
+        font-weight: 500;
+        text-decoration: none;
+    }
 }
 
 @media (prefers-color-scheme: light){
@@ -243,11 +248,17 @@ img{ max-width: 100%; display: block; }
     color: var(--muted);
 }
 .email-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     color: var(--accent);
 }
 .site-header .email-link{
-    color: #0b4a6b;
+    color: var(--accent);
     font-weight: 500;
+    text-decoration: none;
+}
+.email-link:hover{
     text-decoration: underline;
     text-underline-offset: 3px;
 }
