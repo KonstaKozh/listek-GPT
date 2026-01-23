@@ -918,33 +918,67 @@ img{ max-width: 100%; display: block; }
     }
     .nav{
         display: grid;
+        grid-template-columns: 1fr;
         position: fixed;
-        top: 72px;
-        left: 0;
-        right: 0;
+        top: 88px;
+        left: 50%;
+        right: auto;
+        width: 100vw;
+        max-width: none;
         z-index: 35;
-        padding: 12px;
+        padding: 12px 0;
         gap: 8px;
+        align-items: stretch;
         border-radius: 0;
-        transform: translateY(-8px);
+        transform: translate(-50%, -8px);
         opacity: 0;
         pointer-events: none;
         transition: transform .2s ease, opacity .2s ease;
-        background: var(--bg);
+        background: rgba(255,255,255,.96);
+        border-top: 1px solid var(--nav-border);
+        border-bottom: 1px solid var(--nav-border);
+        box-shadow: 0 12px 30px rgba(15,23,42,.2);
     }
     .nav a{
-        padding: 10px 12px;
-        border-radius: 12px;
+        padding: 10px 16px;
+        border-radius: 0;
+        background: #ffffff;
+        border: 1px solid var(--nav-border);
+        box-shadow: 0 6px 16px rgba(15,23,42,.08);
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+    .nav a:hover{
+        background: rgba(14,165,233,.08);
     }
     body.nav-open .nav{
         opacity: 1;
         pointer-events: auto;
-        transform: translateY(0);
+        transform: translate(-50%, 0);
     }
     .nav-toggle{ display: inline-flex; }
     .hero{ padding-top: 28px; }
     .hero-grid{ grid-template-columns: 1fr; }
     .hero-content, .hero-slider{ padding: 18px; }
+}
+
+@media (prefers-color-scheme: dark) and (max-width: 980px){
+    .nav{
+        background: rgba(6,9,22,.92);
+        border-top: 1px solid rgba(255,255,255,.2);
+        border-bottom: 1px solid rgba(255,255,255,.2);
+        box-shadow: 0 12px 30px rgba(0,0,0,.5);
+    }
+    .nav a{
+        background: rgba(15,23,42,.85);
+        border-color: rgba(255,255,255,.22);
+        box-shadow: 0 6px 16px rgba(0,0,0,.45);
+    }
+    .nav a:hover{
+        background: rgba(110,231,255,.12);
+    }
 }
 
 @media (max-width: 720px){
