@@ -16,7 +16,11 @@
 
         <div class="brand">
             <a href="#">
-                <img class="brand__logo" src="img/logo.png" alt="Листэк">
+                <picture>
+                    <source type="image/webp" srcset="img/logo-150.webp 150w, img/logo-300.webp 300w" sizes="150px">
+                    <source type="image/png" srcset="img/logo-150.png 150w, img/logo-300.png 300w" sizes="150px">
+                    <img class="brand__logo" src="img/logo-150.png" alt="Листэк" width="150" height="72" decoding="async">
+                </picture>
             </a>
         </div>
 
@@ -84,19 +88,35 @@
                 <div class="slider" role="region" aria-roledescription="carousel">
                     <div class="slides">
                         <figure class="slide">
-                            <img src="img/slide-1.jpg" alt="Ремонт принтера в сервисном центре" loading="lazy">
+                            <picture>
+                                <source type="image/webp" srcset="img/slide-1-960.webp 960w, img/slide-1-1280.webp 1280w, img/slide-1-1920.webp 1920w" sizes="(max-width: 980px) 100vw, 50vw">
+                                <source type="image/jpeg" srcset="img/slide-1-960.jpg 960w, img/slide-1-1280.jpg 1280w, img/slide-1-1920.jpg 1920w" sizes="(max-width: 980px) 100vw, 50vw">
+                                <img src="img/slide-1-1280.jpg" alt="Ремонт принтера в сервисном центре" width="1280" height="853" fetchpriority="high" decoding="async">
+                            </picture>
                             <figcaption>Ремонт принтеров и МФУ</figcaption>
                         </figure>
                         <figure class="slide">
-                            <img src="img/slide-2.jpg" alt="Заправка картриджа" loading="lazy">
+                            <picture>
+                                <source type="image/webp" srcset="img/slide-2-960.webp 960w, img/slide-2-1280.webp 1280w, img/slide-2-1920.webp 1920w" sizes="(max-width: 980px) 100vw, 50vw">
+                                <source type="image/jpeg" srcset="img/slide-2-960.jpg 960w, img/slide-2-1280.jpg 1280w, img/slide-2-1920.jpg 1920w" sizes="(max-width: 980px) 100vw, 50vw">
+                                <img src="img/slide-2-1280.jpg" alt="Заправка картриджа" loading="lazy" width="1280" height="720" decoding="async">
+                            </picture>
                             <figcaption>Заправка и восстановление картриджей</figcaption>
                         </figure>
                         <figure class="slide">
-                            <img src="img/slide-3.jpg" alt="Ремонт ноутбука" loading="lazy">
+                            <picture>
+                                <source type="image/webp" srcset="img/slide-3-350.webp 350w, img/slide-3-525.webp 525w" sizes="(max-width: 980px) 100vw, 50vw">
+                                <source type="image/jpeg" srcset="img/slide-3-350.jpg 350w, img/slide-3-525.jpg 525w" sizes="(max-width: 980px) 100vw, 50vw">
+                                <img src="img/slide-3-525.jpg" alt="Ремонт ноутбука" loading="lazy" width="525" height="350" decoding="async">
+                            </picture>
                             <figcaption>ПК и ноутбуки: апгрейд, ремонт, чистка</figcaption>
                         </figure>
                         <figure class="slide">
-                            <img src="img/slide-4.jpg" alt="Диагностика монитора" loading="lazy">
+                            <picture>
+                                <source type="image/webp" srcset="img/slide-4-800.webp 800w, img/slide-4-1200.webp 1200w" sizes="(max-width: 980px) 100vw, 50vw">
+                                <source type="image/jpeg" srcset="img/slide-4-800.jpg 800w, img/slide-4-1200.jpg 1200w" sizes="(max-width: 980px) 100vw, 50vw">
+                                <img src="img/slide-4-1200.jpg" alt="Диагностика монитора" loading="lazy" width="1200" height="752" decoding="async">
+                            </picture>
                             <figcaption>Мониторы: подсветка, матрицы, питание</figcaption>
                         </figure>
                     </div>
@@ -123,6 +143,7 @@
                         <li>Диагностика, ремонт узлов подачи</li>
                         <li>Замена термоплёнки / печки</li>
                         <li>Чистка трактов, устранение замятий</li>
+                        <li>Прошивка принтеров и МФУ</li>
                         <li>Настройка печати и сети</li>
                     </ul>
                     <button class="btn btn--doc btn--service card-link" type="button" data-open-contact data-modal-title="Запросить ремонт">Запросить ремонт</button>
@@ -168,6 +189,34 @@
                         <li>Диагностика матрицы</li>
                     </ul>
                     <button class="btn btn--doc btn--service card-link" type="button" data-open-contact data-modal-title="Проконсультироваться">Проконсультироваться</button>
+                </article>
+
+                <article class="card">
+                    <div class="card-media">
+                        <span class="card-icon card-icon--inkjet" role="img" aria-label="Ремонт струйных принтеров"></span>
+                    </div>
+                    <h3>Ремонт струйных принтеров</h3>
+                    <ul>
+                        <li>Промывка печатающей головы</li>
+                        <li>Замена роликов и узлов подачи</li>
+                        <li>Ремонт трактов, устранение протечек</li>
+                        <li>Чистка и калибровка печати</li>
+                    </ul>
+                    <button class="btn btn--doc btn--service card-link" type="button" data-open-contact data-modal-title="Запросить ремонт">Запросить ремонт</button>
+                </article>
+
+                <article class="card">
+                    <div class="card-media">
+                        <span class="card-icon card-icon--ink-bottle" role="img" aria-label="Продажа чернил для струйной печати"></span>
+                    </div>
+                    <h3>Продажа чернил для струйной печати</h3>
+                    <ul>
+                        <li>Оригинальные и совместимые чернила</li>
+                        <li>Подбор по модели принтера</li>
+                        <li>Консультация по цветопередаче</li>
+                        <li>Самовывоз и рекомендации по хранению</li>
+                    </ul>
+                    <button class="btn btn--doc btn--service card-link" type="button" data-open-contact data-modal-title="Узнать наличие">Узнать наличие</button>
                 </article>
             </div>
         </div>
