@@ -619,12 +619,12 @@ img{ max-width: 100%; display: block; }
     -webkit-mask-image: url("img/monitor.svg");
 }
 .card-icon--inkjet{
-    mask-image: url("img/inkjet.svg");
-    -webkit-mask-image: url("img/inkjet.svg");
+    mask-image: url("img/printer-ink.svg?v=2");
+    -webkit-mask-image: url("img/printer-ink.svg?v=2");
 }
-.card-icon--ink-bottle{
-    mask-image: url("img/ink-bottle.svg");
-    -webkit-mask-image: url("img/ink-bottle.svg");
+.card-icon--ink{
+    mask-image: url("img/ink.svg?v=2");
+    -webkit-mask-image: url("img/ink.svg?v=2");
 }
 .card h3{
     margin: 0;
