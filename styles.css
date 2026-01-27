@@ -570,6 +570,9 @@ img{ max-width: 100%; display: block; }
         linear-gradient(180deg, var(--section-grad-1), var(--section-grad-2));
     scroll-margin-top: var(--header-offset);
 }
+.section--compact{
+    padding: 28px 0;
+}
 .section--alt{
     background:
         linear-gradient(180deg, var(--section-grad-1), var(--section-grad-2));
